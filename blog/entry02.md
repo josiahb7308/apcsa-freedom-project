@@ -40,7 +40,9 @@ kaboom.scene("game", function () {
   });
 });
 ```
+This code contains the majority of my learning I have done recently and includes different parts of kaboom game creation such as movement, scene logic, and sprite creation and insertion.
 
+###Winter Break
 During winter break I want to start making my own sprites for my game including the players character and a few different types of enemy sprites that move in different ways and will cause the player to do distinct things to beat each one of them. I think this will create depth to the game and also make it less repetitive because you have to change the way you approach each type of enemy.
 
 [Previous](entry01.md) | [Next](entry03.md)
