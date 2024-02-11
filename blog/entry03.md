@@ -1,4 +1,4 @@
-# Entry 2
+# Entry 3
 ##### 2/11/24
 
 I have been continuing to work on learning kaboom.js and the elements I need to know to be able to complete my freedom project. I focused on basic game mechanics necessary for an entertaining and interactive game. The first mechanic was collisions and how to implement that. For example:
