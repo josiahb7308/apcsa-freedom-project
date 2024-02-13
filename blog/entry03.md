@@ -36,7 +36,7 @@ enemy.action(function () {
 
 ### Barebones beginnning of our game
 
-I started tinkering with using all of these things and I made a simple scene where you can fall because of gravity, jump on and off of a platform, and also move left and right. Here is the sprite additiona and gravity.
+I started tinkering with using all of these things and I made a simple scene where you can fall because of gravity, jump on and off of a platform, and also move left and right. Here is the sprite addition and gravity.
 ```js
 scene("game", function () {
   const GRAVITY = 800;
