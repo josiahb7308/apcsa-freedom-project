@@ -1,70 +1,49 @@
 # Entry 4
 ##### 4/30/2024
 
-I have been making progress in the application of my learning of kaboom.js, I have been doing this by making a MVP of my game that has player movement, collisions, score tracking, as well as a game over function and random generated "apples" which work as coins. 
+I have been making progress in the application of my learning of kaboom.js, I have been doing this by making a MVP of my game that has player movement, collisions, score tracking, as well as a game over function and random generated "apples" which work as coins. The official Kaboom.js(https://kaboomjs.com/) website has been my biggest helper through working through the error messages and everything else.
+
+Starting with the apple counter that appears on the screen this is the code behind that.
 
 ```java
-
-
+let appleCounter = 0;
+const counterLabel = add([
+  text("Apples: " + appleCounter, 12),
+  pos(12, 12),
 ```
-This code is definitely going to be used in my project but I will most likely make it so after the collision the player loses health or a life to make it interesting.
+This code causes a counter to stay on the upper left corner of the screen which displays the amount of apples collected when the player collides with them. I got this idea from looking at other Kaboom games and how they kept track of the score while the game is running. 
 
-The next basic game mechanic I started learning was keeping score to add a challenge and a motivation. This code will make it so when a player picks up a collectible its score goes up which I think is pretty neat. 
+#### Apple Generator and collector
+
+The following code generates apples randomly every 1.5 seconds on the screen.
+
 ```js
-let score = 0;
+function spawnApple() {
+  const apple = add([
+    sprite("apple"),
+    pos(rand(0, width() - 16), rand(0, height() - 16)),
+    area(),
+    "apple",
 
-// Increase score when player gets a collectible
-player.collides("collectible", function (collectible) {
-  collectible.destroy(); // Remove collectible from the screen
-  score += 10; // Increase score
-  // Update score display on the screen
-  scoreLabel.text = "Score: " + score;
-});
+loop(1.5, () => {
+  spawnApple();
 ```
-This code will also be used in my project but im not sure if it will be a collectible or like maybe jumping on an enemy im still coming up with the applications for it.
 
-The last one I touched on was making the enemies move and I thought this was really cool because you can make them chase after the player which makes the game more challenging. The code for this is :
+This code registers when the player has collided with an apple and then it registers it to the apple counter. It also checks if there have been 10 apples destroyed, if yes then it will set `isGameOver` to true and start the game over function which congratulates the player and ends the game.
+
 ```js
-// Move enemy towards the player
-enemy.action(function () {
-  enemy.move(player.pos.sub(enemy.pos).unit().scale(80));
-});
+bean.onCollide("apple", (a) => {
+  destroy(a);
+  appleCounter++;
+  counterLabel.text = "Apples: " + appleCounter;
+  if (appleCounter === 10) {
+    gameOver(true);
+  }
 ```
 
-### Barebones beginnning of our game
-
-I started tinkering with using all of these things and I made a simple scene where you can fall because of gravity, jump on and off of a platform, and also move left and right. Here is the sprite addition and gravity.
-```js
-scene("game", function () {
-  const GRAVITY = 800;
-  const JUMP_FORCE = 400;
-
-
-  const player = add([
-    sprite("player"),
-    pos(80, 80),
-    body(),
-    "chicken",
-  ]);
-```
-The platform creation is this code right here:
-```js
-add([
-    sprite("platform"),
-    pos(0, height() - 40),
-    area(width(), 40),
-    solid(),
-  ]);
-```
-I also used the collision knowledge described earlier to make the sprite become grounded when on the platform.
-```js
- player.collides("platform", function () {
-    player.grounded(true);
-  });
-```
 
 ### Next Steps
-I would like to continue learning these basic game mechanics that I am going to need for my project. Some ideas for my next mechanics are adding obstacles and then after that I would like to put them all together within a scene and test it out to see the compatibility of my ideas with each other and with the idea I have for my game while finding ways to expand on that.
+I want to go further than the MVP and proceed to add the following things: platforms, obstacles, apple generation that isnt random, and hopefully enemies because I think that would elevate the game by a lot if we were able to do that. There is so much more work to do but I am glad that I am understanding what functions to use when and how to make ideas I have in my head into a reality in the game, even though the execution isnt great as of now.
 
 ### EDP & Skills
 I would say I am still in both the 3th stage and 4th stage of the EDP which are imagining and planning. I am imagining how my game will work while taking actions towards learning things that I will need. I am planning how I will use these things that I am learning to make an intriguing and interactive game. I am starting on stage 5 which is creating a prototype because I started to make a barebones prototype using the things that I learned. The next chunk of my time will be spent on making this prototype better and closer to a finished product. I am using the skill How to learn by learning the skills I need to make my game the way I want to. I am also using the skill of creativity by imagining how I want my game to be and taking steps towards it.
