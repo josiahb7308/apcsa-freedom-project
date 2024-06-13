@@ -4,7 +4,7 @@ by **Josiah Benitez**
 ## Context
 I am a student at [HSTAT](https://www.hstat.org/) in the [Software Engineering Program](https://hstatsep.github.io/). The "Freedom Project" for AP Computer Science A is a year-long project all about making anything using technology.
 
-For my project, I chose to independently study Kaboom in order to help me make a fun and simple game.
+For my project, I chose to independently study Kaboom in order to help me make a fun and simple game in which a player controlled character goes around collecting apples and you win once you get a certain amount of apples
 
 ## Links
 
@@ -19,7 +19,7 @@ For my project, I chose to independently study Kaboom in order to help me make a
 * I was able to make my character pick up items and count the items picked up.
 ##### CONS
 * The game doesnt have much depth to it.
-* It isnt as good as I was originally aiming for it to be.
+* It isn't as good as I was originally aiming for it to be.
 
 
 ## Blog
