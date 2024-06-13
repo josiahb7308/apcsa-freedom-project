@@ -1,22 +1,25 @@
 # APCSA Freedom Project
-by **X**
+by **Josiah Benitez**
 
 ## Context
 I am a student at [HSTAT](https://www.hstat.org/) in the [Software Engineering Program](https://hstatsep.github.io/). The "Freedom Project" for AP Computer Science A is a year-long project all about making anything using technology.
 
-For my project, I chose to independently study **X** in order to help me make **X**.
+For my project, I chose to independently study Kaboom in order to help me make a fun and simple game.
 
 ## Links
 
-[Product]()
+[Product](https://replit.com/@josiahb7308/FreedomProjectMvp)
 
-[Presentation]()
+[Presentation](https://docs.google.com/presentation/d/1IJ_uD7ggtwiAFg4fQ7DE9hjnd4ICNanYLH0GKs-SAmg/edit?usp=sharing)
 
 ## Implications
 ##### PROS
-* 
+* I was able to make a functional game with a goal and a score counter.
+* I was able to create a game ending and congratulations for the winner.
+* I was able to make my character pick up items and count the items picked up.
 ##### CONS
-* 
+* The game doesnt have much depth to it.
+* It isnt as good as I was originally aiming for it to be.
 
 
 ## Blog
